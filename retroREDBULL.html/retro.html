@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Red Bull's Totally Rad Webpage!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/98.css@4.0.0/dist/98.min.css">
+
+    <style>
+        body {
+            background-color: navy;
+            color: yellow;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll; /* Ensure scrollbar is always visible */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: red;
+            text-shadow: 2px 2px #000000;
+            text-align: center;
+        }
+
+        marquee {
+            font-size: 24px;
+            color: #00FFFF;
+            font-family:'Courier New', Courier, monospace;
+
+        }
+
+        .container {
+            margin: 20px auto;
+            text-align: center;
+            width: 80%;
+        }
+
+        a {
+            color: #00FFFF;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #FFFF00;
+        }
+
+        .section {
+            border: 2px dashed #FFFF00;
+            padding: 15px;
+            margin: 10px auto;
+            background-color: black;
+            width: 60%; 
+            text-align: center; 
+        }
+
+        .media-placeholder {
+            display: inline-block;
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            background-color: black;
+            color: re;
+            line-height: 150px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #FF0000;
+        }
+
+        .guestbook {
+                    background: #000000;
+                    padding: 10px;
+                    display: inline-block;
+                    color: #FFFFFF;
+                    font-family: "Courier New", Courier, monospace; /* Retro font */
+                    font-size: 14px;}
+
+        /* Sidebar styles */
+        .sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 200px;
+                height: 100%;
+                background: blue; /* Retro blue background */
+                border-right: 3px solid red;
+                color: yellow;
+                padding: 10px;
+                font-family: "Courier New", Courier, monospace; /* Retro font */
+                font-size: 14px; /* Adjust font size */
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start; /* Align the content to the top */
+                text-align: left; /* Adjust text alignment */
+            }
+
+        .sidebar a {
+                display: block;
+                color: yellow;
+                font-weight: bold;
+                text-decoration: none;
+                padding: 10px;
+                border: 2px solid red;
+                margin: 10px 0;
+                background-color: navy; /* Matching overall theme */
+                font-family: "Courier New", Courier, monospace; /* Retro font */
+            }
+
+        .sidebar a:hover {
+                background-color: red;
+                color: white;
+                border-color: yellow; /* Highlight on hover */
+            }
+
+
+        .sidebar img {
+            width: 80%;
+            margin-top: 20px; /* Adjusted to add space between links and logo */
+            display: block;
+            border: 2px solid yellow;
+        }
+
+        .main-content {
+            margin-left: 220px; /* Leave space for the sidebar */
+            padding: 20px;
+        }
+
+        /* Retro-style scrollbar */
+        ::-webkit-scrollbar {
+            width: 20px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: white; /* Solid blue track */
+            border: 2px solid black; /* Red border for contrast */
+            box-shadow: inset 1px 1px 3px #000000, inset -1px -1px 3px #808080;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: grey; /* Solid yellow for clunky retro scrollbar */
+            border: 2px solid black; /* Red border for style consistency */
+            box-shadow: inset 1px 1px 2px #000000, inset -1px -1px 2px #FFFFFF;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: grey; /* Red thumb when hovered */
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: navy; /* Matches the overall body background */
+        }
+
+        /* Flashing Banner */
+        .flashing-banner {
+            background-color: red;
+            color: yellow;
+            font-size: 24px;
+            font-family:'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 10px;
+            animation: flash 1s infinite alternate;
+        }
+
+        @keyframes flash {
+            0% { background-color: red; color: yellow; }
+            50% { background-color: yellow; color: red; }
+            100% { background-color: red; color: yellow; }
+        }
+
+        
+        
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        /* Scrollable Marquee for Red Bull Culture Section */
+        .scrolling-marquee {
+            font-size: 22px;
+            color: yellow;
+            background: black;
+            padding: 10px;
+            border: 2px dashed red;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .scrolling-marquee div {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Image Box for Header Text */
+        .image-box {
+            background-image: url('./Screenshot%202024-12-14%20135237.png'); /* Local image path */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 50px 0;
+            margin: 0 auto;
+            width: 80%; /* Changed to 80% to match the container */
+            height: 250px; /* Adjust this height based on your image */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-box h1 {
+            color: white;
+            font-size: 48px;
+            text-shadow: 2px 2px 5px black;
+            z-index: 10;
+        }
+        
+        #logoimage{
+            border: 5px solid red;
+        }
+
+        #headerimage{
+            border: 5px solid red;
+        }
+
+        body {
+        cursor: crosshair; 
+        }
+
+        a, button {
+        cursor: pointer; /* Classic click pointer */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Added Flashing Banner -->
+    <div class="flashing-banner">
+        Get Your Wings! Sign up for a special Red Bull contest today!
+    </div>
+
+    <div class="sidebar">
+        <!-- Moved logo above navigation section -->
+        <div>
+            <img src="./redbulllogo.webp" id="logoimage" alt="Red Bull GIF">
+        </div>
+        <h2 style="font-family: 'Courier New', Courier, monospace; color: yellow; text-align: center;">NAVIGATION</h2>
+        <a href="./retroshop.html">Shop</a>
+        <a href="#sports">Extreme Sports</a>
+        <a href="#media">Media Zone</a>
+        <a href="#guestbook">Guest Book</a>
+        <a href="./retroabout.html">About</a>
+    </div>    
+    
+
+    <div class="main-content">
+        <!-- Header with Image Box for Text -->
+        <div class="image-box">
+            <h1>Red Bull Gives You Wings!!!</h1>
+        </div><br>
+
+        <marquee><p>Welcome to the Red Bull Webpage...Get Ready for the Thrill! Join the Red Bull Revolution...See What Red Bull Can Do for You!</p></marquee>
+
+        <div class="section" id="sports">
+            <h2>Check Out Our EXTREME SPORTS PHOTOS!</h2>
+
+            <div class="media-placeholder">
+                <img src="./skateboarding.gif" alt="Red Bull Skateboarding GIF" width="200" height="150">
+            </div>
+
+            <div class="media-placeholder">
+                <img src="./redbull%20xtreme.webp" alt="Red Bull Snowboarding GIF" width="200" height="150">
+            </div>
+
+            <div class="media-placeholder">
+                <img src="./redbull%20bmx.webp" alt="Red Bull Racing Cars GIF" width="200" height="150">
+            </div>
+            <p><a href="./retroconstruct.html">Click Here to See More Rad Stuff!</a></p>
+        </div>
+
+            <div class="section" id="media">
+                <h3>Media Zone</h3>
+                <div class="media-placeholder">
+                    <img src="./Red-bull 3.gif" alt="media" width="250", height="150">
+                </div><br>
+                
+                <h4>Latest News</h4>
+                <p>Red Bull Racing wins another championship! Check out the highlights <a href="./retroconstruct.html">here</a>.</p>
+            </div>
+
+            <div class="section" id="guestbook">
+                <h3>Sign Our Guestbook!</h3>
+                <div class="guestbook">
+                    <form id="guestbook-form">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" class="input-field"><br><br>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="30" class="input-field"></textarea><br><br>
+                        <input type="submit" value="submit" class="button">
+                    </form>
+                </div>
+            </div>
+
+            <!-- Added 'Page Under Construction' banner -->
+            <div class="section">
+                <h3>Page Under Construction!</h3>
+                    <div class="under-contruction">
+                        <img src="./construction.gif" alt="under-construction" width="50" height="50">
+                    </div>
+                <p>Stay tuned for more rad updates coming soon!</p>
+            </div>
+
+            <!-- retro fan zone -->
+            <div class="section">
+                <h3>Fan Zone</h3>
+                <p>Love Red Bull? Share your photos and stories with us!</p>
+            </div><br><br>
+
+
+            <!-- Pixelated Red Bull Logo at the Top -->
+            <div class="header-blink">
+                <img src="./dog running around.gif" alt="Red Bull gif" width="60%" height="80">
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>You're visitor #01345!</p>
+            <p><a href="./retroconstruct.html">Totally Cool Links</a> | <a href="./retroconstruct.html">Extreme Sports</a> | <a href="./retroshop.html">Red Bull Shop</a></p>
+        </div>
+
+        <footer style="background-color: blue; color: yellow; padding: 20px; text-align: center; font-size: 16px; border-top: 2px solid red;">
+            <p>© 19XX SynthSloth x Red Bull | Powered by Retro Vibes & Web Dev Magic |  <a href="./retroconstruct.html" style="color: yellow; text-decoration: none;">Privacy Policy</a> | <a href="./retroconstruct.html" style="color: yellow; text-decoration: none;">Terms of Use</a></p>
+            <p>Stay energetic, stay creative, and always go for the thrill! ✨</p>
+        </footer>
+    </div>
+
+        
+
+    <!-- Added Dial-up Sound Effect -->
+    <audio autoplay>
+        <source src="dial-up-sound.mp3" type="audio/mp3">
+    </audio>
+
+
+
+    <script>
+        // Wait for the DOM to be fully loaded before adding event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle "Click Here to See More Rad Stuff" link
+            document.getElementById('more-rad-stuff').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'under-construction.html'; // Example placeholder page
+            });
+    
+            // Handle "Latest News Highlights"
+            document.getElementById('highlight-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'under-construction.html'; // Redirect to an under-construction page
+            });
+    
+            // Scroll to "Extreme Sports" section when clicked from sidebar
+            document.getElementById('sports-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('sports').scrollIntoView({ behavior: 'smooth' });
+            });
+    
+            // Scroll to "Media Zone" section when clicked from sidebar
+            document.getElementById('media-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('media').scrollIntoView({ behavior: 'smooth' });
+            });
+    
+            // Scroll to "Guestbook" section when clicked from sidebar
+            document.getElementById('guestbook-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('guestbook').scrollIntoView({ behavior: 'smooth' });
+            });
+    
+            // Show retro-style thank you popup when signing guestbook
+            document.getElementById('guestbook-form').addEventListener('submit', function(e) {
+                e.preventDefault();  // Prevent the form from submitting the traditional way
+    
+                // Creating the retro-style popup
+                const popup = document.createElement('div');
+                popup.innerHTML = `
+                    <div style="font-family: 'Courier New', Courier, monospace; 
+                               padding: 20px; background: black; color: yellow; 
+                               border: 2px solid red; width: 300px; margin: 100px auto; text-align: center;">
+                        <p><strong>Thank you for signing the guestbook!</strong></p>
+                        <p>Your support means a lot!</p>
+                        <button id="close-popup" style="background-color: red; color: white; border: none; padding: 10px; cursor: pointer;">Close</button>
+                    </div>
+                `;
+                document.body.appendChild(popup);
+    
+                // Close popup when button is clicked
+                document.getElementById('close-popup').addEventListener('click', function() {
+                    document.body.removeChild(popup);
+                });
+            });
+        });
+    </script>
+    
+    
+    
+</body>
+</html>

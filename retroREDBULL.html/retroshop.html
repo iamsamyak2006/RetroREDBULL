@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Bull Shop</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: blue; /* Blue background to match the theme */
+            color: yellow; /* Yellow text for contrast */
+            text-shadow: 2px 2px black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-y: scroll;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: red; /* Red color for headings */
+            text-shadow: 5px 5px black;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            margin-top: 30px;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .product {
+            background-color: navy;
+            padding: 20px;
+            border: 2px solid red;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            color: white;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid red;
+        }
+
+        .product h3 {
+            margin: 15px 0;
+            font-size: 24px;
+            color: yellow;
+        }
+
+        .product p {
+            font-size: 18px;
+            text-shadow: 2px 2px black;
+        }
+
+        .buy-button {
+            background-color: red; /* Red button */
+            color: white;
+            text-shadow: 1px 1px black;
+            box-shadow: 2px 2px black;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .buy-button:hover {
+            background-color: yellow; /* Hover effect in yellow */
+            text-shadow: 1px 1px black;
+            box-shadow: 3px 3px black;
+            color: red;
+        }
+
+        /* Back to home button */
+        .back-button {
+            background-color: red; /* Red button */
+            color: white;
+            text-shadow: 1px 1px black;
+            box-shadow: 3px 3px black;
+            padding: 15px 30px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background-color: yellow;
+            text-shadow: 1px 1px black;
+            box-shadow: 5px 5px black;
+            color: red;
+        }
+
+        .footer-gif {
+            margin-top: 40px;
+            display: block;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading for the Shop Page -->
+    <h1>Welcome to the Red Bull Shop</h1>
+    <p><strong>Get your favorite Red Bull products here!</strong></p>
+
+    <!-- Product List Section -->
+    <div class="product-list">
+        <!-- Example Product 1 -->
+        <div class="product">
+            <img src="./red bull can.webp" alt="Red Bull Can">
+            <h3>Red Bull Energy Drink</h3>
+            <p>$2.99 per Can</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        
+        <!-- Example Product 2 -->
+        <div class="product">
+            <img src="./redbull jacket.webp" alt="Red Bull Shirt">
+            <h3>Red Bull Jacket</h3>
+            <p>$19.99</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+
+        <!-- Example Product 3 -->
+        <div class="product">
+            <img src="./redbull cap.webp" alt="Red Bull Hat">
+            <h3>Red Bull Cap</h3>
+            <p>$14.99</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </div><br><br>
+
+    <!-- Button to go back to Home Page -->
+    <a href="./retro.html" class="back-button">Back to Home Page</a>
+
+    <!-- Footer GIF (Red Bull Theme) -->
+    <img class="footer-gif" src="./dog running around.gif" alt="Fun Red Bull GIF">
+
+</body>
+</html>
