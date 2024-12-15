@@ -38,51 +38,20 @@
             height: 100vh;
         }
 
-        /* Enter GIF Styling */
-        .enter-gif img {
-            width: 200px;
+        /* GIF Styling */
+        .gif img {
+            width: 150px;
             border: 6px dashed yellow;
             padding: 10px;
             background-color: black;
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
+            margin: 20px 0;
         }
 
-        .enter-gif img:hover {
+        .gif img:hover {
             transform: scale(1.2);
             border-color: red;
-        }
-
-        /* Loading bar container */
-        .loading-bar-container {
-            margin-top: 50px;
-            display: none;
-        }
-
-        .loading-bar {
-            width: 300px;
-            height: 25px;
-            background: black;
-            border: 4px solid yellow;
-            margin: 10px auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .loading-bar .progress {
-            width: 0;
-            height: 100%;
-            background: cyan;
-            animation: load-progress 3s linear forwards;
-        }
-
-        @keyframes load-progress {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 100%;
-            }
         }
 
         p {
@@ -111,30 +80,26 @@
 </head>
 <body>
     <div class="splash-container">
+        <!-- GIF Above Header -->
+        <div class="gif">
+            <img src="./redbull 2.gif" alt="Retro Animation">
+        </div>
+        
         <h1>Welcome to Red Bull's Retro World!</h1>
+
+        <!-- GIF Below Header -->
+        <div class="gif">
+            <img src="./redbull.gif" alt="Red Bull Animation">
+        </div>
+
         <h2>Press Enter to Begin the Fun</h2>
-        <div class="enter-gif">
-            <img src="images/enter-button.gif" alt="Enter" onclick="showLoadingBar()">
+        
+        <!-- Enter Button GIF -->
+        <div class="gif">
+            <img src="./ENTER.gif" alt="Enter" onclick="window.location.href='./index.html';">
         </div>
+        
         <div class="sparkle">✨ Red Bull Gives You Wings! ✨</div>
-        <div class="loading-bar-container" id="loadingBar">
-            <div class="loading-bar">
-                <div class="progress"></div>
-            </div>
-            <p>Loading... Please Wait</p>
-        </div>
     </div>
-
-    <script>
-        function showLoadingBar() {
-            const loadingBar = document.getElementById('loadingBar');
-            loadingBar.style.display = 'block'; // Show the loading bar
-
-            // Redirect to main page after 3 seconds
-            setTimeout(() => {
-                window.location.href = "./retro.html"; // Change to your main page
-            }, 3000);
-        }
-    </script>
 </body>
 </html>
